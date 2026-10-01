@@ -1,0 +1,133 @@
+.package-contact-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 18px;
+  min-height: 100%;
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #111827;
+  color: #fff;
+  text-decoration: none;
+  animation: packageContactEnter 700ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+.package-contact-card::before {
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 46px;
+  height: 4px;
+  background: #ffd900;
+  content: '';
+  animation: packageContactLine 800ms ease-out 250ms both;
+}
+
+.package-contact-kicker {
+  color: #ffd900;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  animation: packageContactText 500ms ease-out 180ms both;
+}
+
+.package-contact-card h3 {
+  font-size: 27px;
+  line-height: 1.2;
+  animation: packageContactText 550ms ease-out 300ms both;
+}
+
+.package-contact-card h3 span {
+  color: #ffd900;
+}
+
+.package-contact-card p {
+  margin: 0;
+  color: #d5d9df;
+  font-size: 15px;
+  line-height: 1.6;
+  animation: packageContactText 550ms ease-out 420ms both;
+}
+
+.package-contact-number {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: #d5d9df;
+  font-size: 14px;
+  animation: packageContactText 550ms ease-out 540ms both;
+}
+
+.package-contact-number strong {
+  color: #fff;
+}
+
+.package-contact-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 45px;
+  padding: 0 15px;
+  border-radius: 5px;
+  background: #41b34d;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background .2s, transform .2s;
+  animation: packageContactText 550ms ease-out 660ms both;
+}
+
+.package-contact-card:hover .package-contact-action {
+  transform: translateY(-2px);
+  background: #2f963b;
+}
+
+.package-contact-action svg {
+  transition: transform .2s;
+}
+
+.package-contact-card:hover .package-contact-action svg {
+  transform: translateX(3px);
+}
+
+@keyframes packageContactEnter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes packageContactText {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes packageContactLine {
+  from { width: 0; }
+  to { width: 46px; }
+}
+
+@media (max-width: 560px) {
+  .package-contact-card {
+    min-height: 310px;
+    padding: 26px;
+  }
+
+  .package-contact-card h3 {
+    font-size: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .package-contact-card,
+  .package-contact-card::before,
+  .package-contact-card > * {
+    animation: none;
+  }
+
+  .package-contact-action,
+  .package-contact-action svg {
+    transition: none;
+  }
+}

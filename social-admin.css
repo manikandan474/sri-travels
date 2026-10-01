@@ -1,0 +1,2 @@
+.social-url-field{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}.social-url-field span{font-size:12px;font-weight:700}.social-url-field input{border:1px solid var(--line);border-radius:5px;padding:10px 12px;outline:none}.social-url-field input:focus{border-color:var(--red)}
+.socials a{display:grid;place-items:center;width:30px;height:30px;background:#202b3b;border-radius:4px;color:#fff;font-weight:700;text-decoration:none}.socials a:hover{background:var(--red)}

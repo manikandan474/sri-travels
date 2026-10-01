@@ -1,0 +1,33 @@
+.nav-wrap {
+  max-width: none;
+}
+
+.hero-inner {
+  max-width: none;
+  margin: 0;
+}
+
+.vehicles-section {
+  max-width: 1500px;
+}
+
+.vehicles-section .vehicle-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.vehicle-card .card-foot {
+  justify-content: flex-end;
+}
+
+@media (max-width: 850px) {
+  .vehicles-section .vehicle-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .vehicles-section .vehicle-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
